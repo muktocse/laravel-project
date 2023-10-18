@@ -12,6 +12,7 @@ Route::get('about-us',[frontendController::class,'about'])->name('front.about');
 
 Route::get('task/create',[TaskController::class,'create'])->name('task.create');
 Route::post('task',[TaskController::class,'store'])->name('task.store');
+Route::get('task',[TaskController::class,'index'])->name('task.index');
 
 
 Route::middleware([

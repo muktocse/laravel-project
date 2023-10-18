@@ -13,7 +13,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $tasks =Task::all();
+//        dd($tasks);
+        return view('modules.task.index',compact('tasks'));
     }
 
     /**
@@ -32,7 +34,12 @@ class TaskController extends Controller
     public function store(Request $request)
     {
 //        dd('works');
-        dd($request->all());
+        $this->validate($request,[
+            'title'=>'required',
+        ]);
+//dd($request->all());
+        Task::created($request->all());
+        return redirect()->route('task.index');
     }
 
     /**

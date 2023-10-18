@@ -15,16 +15,17 @@
                         <h2>Create Us</h2>
                     </div>
                     <div class="card-body">
-                        {{--                        @if($errors)--}}
-                        {{--                            <ul  class="alert alert-danger" >--}}
+{{--                                                @if($errors)--}}
+{{--                                                    <ul  class="alert alert-danger" >--}}
 
-                        {{--                            @foreach($errors->all() as $error)--}}
+{{--                                                    @foreach($errors->all() as $error)--}}
 
-                        {{--                                   <li> {{$error}}</li>--}}
+{{--                                                           <li> {{$error}}</li>--}}
+{{--                                                            <li> {{$error}}</li>--}}
 
-                        {{--                            @endforeach--}}
-                        {{--                            </ul>--}}
-                        {{--                        @endif--}}
+{{--                                                    @endforeach--}}
+{{--                                                    </ul>--}}
+{{--                                                @endif--}}
                         <form method="post" action="{{route('task.store')}}" >
                             @csrf
                             <label for="" class="w-100">
